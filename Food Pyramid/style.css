@@ -1,0 +1,130 @@
+
+.food-pyramid {
+    margin-top: 30px;
+    margin-left: 175px;
+   
+    clip-path: polygon(50% 0, 100% 110%, 0 110%);
+    width: 150vmin;
+    height: 85vmin;
+    background-color: white;
+}
+
+
+.shelf1 {
+    background-color: #f40606;
+    height: 100px;
+    margin-bottom:10px;
+    margin-top: 5px;
+}
+.shelf1:hover .button {
+    display:block;
+}
+
+
+
+.shelf2 {
+    background-color: #f1c100;
+    height: 75px;
+    margin-bottom:10px;
+}
+.shelf2:hover .button {
+    display:block;
+}
+.shelf3 {
+    background-color: #fcfc00;
+    height: 80px;
+}
+.shelf3:hover .button {
+    display:block;
+}
+.shelf4 {
+    background-color: #4b5eee;
+    height: 90px;
+}
+.shelf4:hover .button {
+    display:block;
+}
+.shelf5 {
+    background-color: #6f3d1d;
+    height: 90px;
+}
+.shelf5:hover .button {
+    display:block;
+}
+.shelf6 {
+    background-color: #168907;
+    height: 90px;
+    margin-bottom: 10px;
+}
+.shelf6:hover .button {
+    display:block;
+}
+    .inputbox{
+        text-align: center;
+        background: transparent;
+        border: none;
+        width: 90%;
+        padding-top: 13px;
+    }
+
+.button {
+    border-radius: 50%;
+    border-width: 1px;
+    background: #a8a8a8;
+    height: 40px;
+    width: 40px;
+    font-size:40px;
+    display:none;
+   
+    padding-bottom: 6px;
+   
+}
+
+.circle {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+  
+    background-color: #a8a8a8ea;
+    border-radius: 50%;
+    /* display:inline-block; */
+  
+     border: 1px solid #000; 
+}
+.circle2 {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+  
+    background-color: #a8a8a8ea;
+    border-radius: 50%;
+    /* display:inline-block; */
+  
+     border: 1px solid #000; 
+}
+
+
+.button-container {
+    width: 100%;
+     display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    
+}
+.button-container2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100px;
+}
+.button-container22 {
+    width: 100%;
+     display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+}
+    
+

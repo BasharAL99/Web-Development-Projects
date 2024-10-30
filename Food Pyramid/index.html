@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title> Food-pyramid</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="script.js"></script>
+   </head>
+   <body>   
+      <div class="food-pyramid">
+         <div class="shelf1">
+            <div class="button-container2">
+               <button class="button" onclick = "increase('top-shelf')">+</button>
+               <div class="circle"><input class="inputbox" id="top-shelf" value="0" readonly></input></div>
+               <button class="button" onclick = "decrease('top-shelf')">-</button>
+            </div>
+            </div>
+            
+        
+         <div class="shelf2">
+            <div class="button-container22">
+               <button class="button" onclick = "increase('second-shelf')">+</button>
+               <div class="circle2"><input class="inputbox" id="second-shelf" value="0" readonly></input></div>
+               <button class="button" onclick = "decrease('second-shelf')">-</button>
+            </div>
+           
+         
+      </div>
+         <div class="shelf3">
+            <div class="button-container">
+               <button class="button" onclick = "increase('third-shelf')">+</button>
+               <div class="circle"><input class="inputbox" id="third-shelf" value="0" readonly></input></div>
+               <button class="button" onclick = "decrease('third-shelf')">-</button>
+            </div>
+            
+         </div>
+         <div class="shelf4">
+            <div class="button-container">
+               <button class="button" onclick = "increase('fourth-shelf')">+</button>
+               <div class="circle"><input class="inputbox" id="fourth-shelf" value="0" readonly></input></div>
+               <button class="button" onclick = "decrease('fourth-shelf')">-</button>
+            </div>
+      
+         </div>
+         <div class="shelf5">
+            <div class="button-container">
+               <button class="button" onclick = "increase('fifth-self')">+</button>
+               <div class="circle"><input class="inputbox" id="fifth-self" value="0" readonly></input></div>
+               <button class="button" onclick = "decrease('fifth-self')">-</button>
+            </div>
+          
+         </div>
+         <div class="shelf6">
+            <div class="button-container">
+               <button class="button" onclick = "increase('sixth-shelf')">+</button>
+               <div class="circle"><input class="inputbox" id="sixth-shelf" value="0" readonly></input></div>
+               <button class="button" onclick = "decrease('sixth-shelf')">-</button>
+            </div>
+            </div>
+            <center>
+               <div class="dateDiv">
+                  <label><strong>My food Pyramid</strong></label><br>
+                  <input id="dateEntry" type=date>
+                  <button class="dateButton" onclick="inputDate()">Record Date</button>
+              </div>
+            </center>
+           </div>
+         </div>
+   </body>
+</html>
