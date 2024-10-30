@@ -1,0 +1,119 @@
+/* CSS styles for the Simon Memory Game */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #f7fafa;
+    color: #0a0808;
+    text-align: center;
+   
+    margin-top: 30px;
+    
+}
+/* styling for the game buttons */
+.button{
+    width: 130px;
+    height: 130px;
+    border: 7px solid #030303; 
+    border-radius: 100%;
+    cursor: pointer;
+    display:inline-block;
+    margin-top: 30px;
+    margin-right:30px;
+    margin-left: 30px;   
+}
+/* hover effect for buttons */
+.button:hover{
+    box-shadow: inset 0px 0px 0px 3px rgb(4, 244, 244);
+    box-sizing: border-box;
+}
+/* styling for each button */
+.top-left {   
+    background-color: #06f532;
+  
+}
+
+.active{
+    background-color: white;
+}
+
+.top-right {
+    
+    background-color: #f50505;
+    
+    .active{
+        background-color: white;
+    }
+     
+    
+}
+
+
+.bottom-left {
+   
+    background-color: #e6f605;
+    border: 10px solid #030303;
+   
+}
+.active{
+    background-color: white;
+}
+
+.bottom-right {
+    
+    background-color: #0303f6;
+    border-top-left-radius: 100%;
+   
+}
+.active{
+    background-color: white;
+}
+/* styling for inner and small circles */
+.inner-circle {
+    display: inline-block;
+    width:200px;
+    height:200px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 100px;
+    background-color:black; 
+    top: 170px;
+    left: 555px;
+   
+}
+.small-circle {
+    display: inline-block;
+    width:15px;
+    height:15px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 100px;
+    background-color:rgb(249, 5, 5); 
+    top:300px;
+    left: 650px;
+}
+/* styling for score and start buttons */
+.button1{
+    background-color:lightgray;
+    border-radius: 10%;
+    font-family: 'Orbitron';
+    top:12px;
+    right:0px;
+    left: 0px;
+    position: relative;
+    
+    
+}
+
+.start-button{
+    cursor: pointer;
+    width: 66px;
+    height: 25px
+}
+/* hover effect for start button */
+.start-button:hover{
+    box-shadow: inset 0px 0px 0px 2px rgb(6, 185, 78);
+    box-sizing: border-box;
+}
+  
+
+    
+
