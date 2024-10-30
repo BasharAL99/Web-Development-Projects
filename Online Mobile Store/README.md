@@ -1,4 +1,4 @@
-/* 
+# Database Managment for Online Mobile Store (Backend)
 Database Design Description and Impact on Code Development:
 
 1. Database Structure:
@@ -18,4 +18,4 @@ Database Design Description and Impact on Code Development:
    - Error handling is integrated to ensure robustness and reliability of the database interactions, providing clear feedback and logging for operations, which aids in debugging and operational monitoring.
 
 This design and implementation strategy ensures that the OnlinePhoneStore database is not only optimised for performance but also flexible enough to adapt to future requirements as the store expands its offerings or modifies its operational strategies.
-*/
+
