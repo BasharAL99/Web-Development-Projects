@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landlord-Tenant Management System</title>
+  <style>
+    /* Add some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #333;
+      padding: 10px;
+    }
+    nav button {
+      margin: 0 10px;
+      padding: 5px 10px;
+      color: rgb(8, 7, 7);
+      background-color: #06b7f8;
+      border: none;
+      cursor: pointer;
+    }
+    section {
+      padding: 20px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      box-sizing: border-box;
+    }
+    button[type="submit"],
+    button[type="button"] {
+      padding: 10px;
+      background-color: #06b7f8;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation buttons -->
+  <nav>
+    <button id="tenant-btn">Add Tenant</button>
+    <button id="landlord-btn">Add Landlord</button>
+    <button id="contract-btn">Add Contract</button>
+    <button id="crud-btn">CRUD Operations</button>
+  </nav>
+
+  <!-- Tenant form -->
+  <section id="tenant-form" style="display:none;">
+    <h2>Add New Tenant</h2>
+    <form id="add-tenant-form">
+         <!-- Radio buttons for title -->
+    <label>
+      <input type="radio" name="title" value="Mx"> Mx
+    </label>
+    <label>
+      <input type="radio" name="title" value="Ms"> Ms
+    </label>
+    <label>
+      <input type="radio" name="title" value="Mr"> Mr
+    </label>
+    <label>
+      <input type="radio" name="title" value="Mrs"> Mrs
+    </label>
+    <label>
+      <input type="radio" name="title" value="Miss"> Miss
+    </label>
+    <label>
+      <input type="radio" name="title" value="Dr"> Dr
+    </label>
+    <label>
+      <input type="radio" name="title" value="Other" id="otherTitleRadio"> Other
+    </label>
+
+     <!-- Other title input (hidden by default) -->
+      <input type="text" name="otherTitle" id="otherTitleInput" placeholder="Specify Other Title" style="display:none;">
+      <br>
+      <input type="text" name="firstName" placeholder="First Name">
+      <input type="text" name="surname" placeholder="Surname">
+      <input type="text" name="phoneNumber" placeholder="Phone Number">
+      <input type="email" name="email" placeholder="Email Address">
+      <input type="text" name="addressLine1" placeholder="Address Line 1">
+      <input type="text" name="addressLine2" placeholder="Address Line 2">
+      <input type="text" name="town" placeholder="Town">
+      <input type="text" name="county" placeholder="County/City">
+      <input type="text" name="eircode" placeholder="EIRCODE">
+      <button type="submit">Add Tenant</button>
+    </form>
+  </section>
+
+
+  <!-- Landlord form -->
+  <section id="landlord-form" style="display:none;">
+    <h2>Add New Landlord</h2>
+    <form id="add-landlord-form">
+        <!-- Radio buttons for title -->
+<label>
+    <input type="radio" name="title" value="Mx"> Mx
+  </label>
+  <label>
+    <input type="radio" name="title" value="Ms"> Ms
+  </label>
+  <label>
+    <input type="radio" name="title" value="Mr"> Mr
+  </label>
+  <label>
+    <input type="radio" name="title" value="Mrs"> Mrs
+  </label>
+  <label>
+    <input type="radio" name="title" value="Miss"> Miss
+  </label>
+  <label>
+    <input type="radio" name="title" value="Dr"> Dr
+  </label>
+  <label>
+    <input type="radio" name="title" value="Other" id="otherTitleRadiolandlord"> Other
+  </label>
+       <!-- Other title input (hidden by default) -->
+       <input type="text" name="otherTitle" id="otherTitleInputlandlord" placeholder="Specify Other Title" style="display:none;">
+       <br>
+      <input type="text" name="firstName" placeholder="First Name">
+      <input type="text" name="surname" placeholder="Surname">
+      <input type="text" name="phoneNumber" placeholder="Phone Number">
+      <input type="email" name="email" placeholder="Email Address">
+      <input type="text" name="addressLine1" placeholder="Address Line 1">
+      <input type="text" name="addressLine2" placeholder="Address Line 2">
+      <input type="text" name="town" placeholder="Town">
+      <input type="text" name="county" placeholder="County/City">
+      <input type="text" name="eircode" placeholder="EIRCODE">
+      <input type="date" name="dateOfBirth" placeholder="Date of Birth">
+      <select name="councilPermission">
+        <option value="Y">Yes</option>
+        <option value="N">No</option>
+      </select>
+      <select name="contactPermission">
+        <option value="Y">Yes</option>
+        <option value="N">No</option>
+      </select>
+      <button type="submit">Add Landlord</button>
+    </form>
+  </section>
+
+  <!-- Contract form -->
+  <section id="contract-form" style="display:none;">
+    <h2>Add New Contract</h2>
+    <form id="add-contract-form">
+      <input type="date" name="contractDate" placeholder="Contract Date">
+      <input type="text" name="propertyAddress" placeholder="Property Address">
+      <input type="number" name="feeMonthly" placeholder="Fee Monthly (€)">
+      <input type="text" name="propertyDoorNumber" placeholder="Property Door Number">
+      <select name="contractLength">
+        <option value="Month">Month</option>
+        <option value="Year">Year</option>
+        <option value="Permanent">Permanent</option>
+      </select>
+      <select name="propertyType">
+        <option value="Apartment">Apartment</option>
+        <option value="Semi-Detached">Semi-Detached</option>
+        <option value="Detached">Detached</option>
+        <option value="Other">Other</option>
+      </select>
+      <button type="submit">Add Contract</button>
+    </form>
+  </section>
+
+  <!-- CRUD section -->
+  <section id="crud-section">
+    <h2>CRUD Operations</h2>
+    <!-- Search Tenant -->
+    <form id="search-tenant-form">
+      <input type="text" name="searchTenant" placeholder="Enter Tenant ID">
+      <button type="button" id="search-tenant-btn">Search Tenant</button>
+    </form>
+    <!-- Update Tenant -->
+    <form id="update-tenant-form">
+      <input type="text" name="updateTenantId" placeholder="Enter Tenant ID">
+      <input type="text" name="updatedFirstName" placeholder="New First Name">
+      <input type="text" name="updatedSurname" placeholder="New Surname">
+      <button type="button" id="update-tenant-btn">Update Tenant</button>
+    </form>
+    <!-- Delete Tenant -->
+    <form id="delete-tenant-form">
+      <input type="text" name="deleteTenantId" placeholder="Enter Tenant ID">
+      <button type="button" id="delete-tenant-btn">Delete Tenant</button>
+    </form>
+  </section>
+
+  <!-- Error message display area -->
+  <div id="error-messages" style="display: none; color: red;"></div>
+
+  <script>
+    document.getElementById('tenant-btn').addEventListener('click', function() {
+      showForm('tenant-form');
+    });
+
+    document.getElementById('landlord-btn').addEventListener('click', function() {
+      showForm('landlord-form');
+    });
+
+    document.getElementById('contract-btn').addEventListener('click', function() {
+      showForm('contract-form');
+    });
+
+    document.getElementById('crud-btn').addEventListener('click', function() {
+      showForm('crud-section');
+    });
+
+    function showForm(formId) {
+      document.querySelectorAll('section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(formId).style.display = 'block';
+    }
+
+    function showOtherTitleInput() {
+      const otherTitleRadio = document.getElementById('otherTitleRadio');
+      const otherTitleInput = document.getElementById('otherTitleInput');
+      if (otherTitleRadio.checked) {
+        otherTitleInput.style.display = 'block';
+      } else {
+        otherTitleInput.style.display = 'none';
+      }
+    }
+
+    function showOtherTitleInputlandlord() {
+      const otherTitleRadio = document.getElementById('otherTitleRadiolandlord');
+      const otherTitleInput = document.getElementById('otherTitleInputlandlord');
+      if (otherTitleRadio.checked) {
+        otherTitleInput.style.display = 'block';
+      } else {
+        otherTitleInput.style.display = 'none';
+      }
+    }
+
+    document.querySelectorAll('input[name="title"]').forEach(radio => {
+      radio.addEventListener('change', showOtherTitleInput);
+    });
+
+    document.querySelectorAll('input[name="title"]').forEach(radio => {
+      radio.addEventListener('change', showOtherTitleInputlandlord);
+    });
+
+  
+  document.getElementById('add-tenant-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    const tenantData = {};
+    formData.forEach((value, key) => {
+      tenantData[key] = value;
+    });
+
+    // Send POST request to the backend
+    fetch('/api/tenants', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(tenantData),
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to add tenant');
+      }
+      return response.json();
+    })
+    .then(data => {
+      alert('Tenant added successfully!');
+      // reset the form after successful submission
+      document.getElementById('add-tenant-form').reset();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Failed to add tenant: ' + error.message);
+    });
+  });
+
+  //  event listeners for landlord 
+  document.getElementById('add-landlord-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    const landlordData = {};
+    formData.forEach((value, key) => {
+     landlordData[key] = value;
+    });
+
+    // Send POST request to the backend
+    fetch('/api/landlords', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(tenantData),
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to landlord');
+      }
+      return response.json();
+    })
+    .then(data => {
+      alert('landlord added successfully!');
+      // reset the form after successful submission
+      document.getElementById('add-landlord-form').reset();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Failed to add landlord: ' + error.message);
+    });
+  });
+
+  //event listener for contract forms
+
+  document.getElementById('add-contract-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    const contractData = {};
+    formData.forEach((value, key) => {
+    contractData[key] = value;
+    });
+
+    // Send POST request to the backend
+    fetch('/api/contracts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(tenantData),
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to add contractor');
+      }
+      return response.json();
+    })
+    .then(data => {
+      alert('contractor  added successfully!');
+      // reset the form after successful submission
+      document.getElementById('add-contractor-form').reset();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Failed to add contractor: ' + error.message);
+    });
+  });
+
+  // Function to search for tenants
+  document.getElementById('search-tenant-btn').addEventListener('click', function() {
+    const tenantId = document.querySelector('#search-tenant-form input[name="searchTenant"]').value;
+    fetch(`/api/tenants/${tenantId}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Tenant not found');
+        }
+        return response.json();
+      })
+      .then(tenant => {
+        alert(`Tenant found: ${tenant.title} ${tenant.firstName} ${tenant.surname}`);
+        
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to search for tenant: ' + error.message);
+      });
+  });
+
+  
+  // Update Tenant button
+document.getElementById('update-tenant-btn').addEventListener('click', function() {
+  const formData = new FormData(document.getElementById('update-tenant-form'));
+  const tenantId = formData.get('updateTenantId');
+  fetch(`/api/tenants/${tenantId}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      firstName: formData.get('updatedFirstName'),
+      surname: formData.get('updatedSurname'),
+      
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      console.log(`Tenant with ID ${tenantId} updated successfully`);
+      // You can update the UI or show a success message here
+    } else {
+      throw new Error('Failed to update tenant');
+    }
+  })
+  .catch(error => console.error('Error:', error));
+});
+
+
+// Delete Tenant button
+document.getElementById('delete-tenant-btn').addEventListener('click', function() {
+  const tenantId = document.querySelector('#delete-tenant-form input[name="deleteTenantId"]').value;
+  fetch(`/api/tenants/${tenantId}`, {
+    method: 'DELETE'
+  })
+  .then(response => {
+    if (response.ok) {
+      console.log(`Tenant with ID ${tenantId} deleted successfully`);
+      // You can update the UI or show a success message here
+    } else {
+      throw new Error('Failed to delete tenant');
+    }
+  })
+  .catch(error => console.error('Error:', error));
+});
+
+  
+  
+
+  // Function to load existing tenants
+  function loadTenants() {
+    fetch('/api/tenants')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to load tenants');
+        }
+        return response.json();
+      })
+      .then(tenants => {
+        // Display the list of tenants on the UI
+        const tenantsList = document.getElementById('tenants-list');
+        tenantsList.innerHTML = ''; // Clear previous entries
+        tenants.forEach(tenant => {
+          const listItem = document.createElement('li');
+          listItem.textContent = `${tenant.title} ${tenant.firstName} ${tenant.surname}`;
+          tenantsList.appendChild(listItem);
+        });
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to load tenants: ' + error.message);
+      });
+  
+    
+  // Call the loadTenants function to display tenants when the page loads
+  window.addEventListener('load', loadTenants);
+    }
+</script>
+
+
+</body>
+</html>
